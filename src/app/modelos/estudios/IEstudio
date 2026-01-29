@@ -1,0 +1,8 @@
+import { IEnsenyanza } from "./IEnsenyanza";
+
+
+export interface IEstudio {
+    denominacion: string;
+    ensenyanza: IEnsenyanza;
+    curso: number;
+}
