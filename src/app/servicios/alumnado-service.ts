@@ -17,7 +17,7 @@ export class AlumnadoService {
 
 
 
-  public obtenerToken(apiKey: string): Observable<any> {
+  public obtenerToken(apiKey: string):void {
 
     const url: string = 'SERVIDOR' + '/seguridad/autenticacion-por-aplicacion';
 
@@ -25,9 +25,12 @@ export class AlumnadoService {
       apiKey: apiKey
     }
 
-    return this.http.post(url, body).pipe(
+    this.http.post(url, body).pipe(
       map((res: any) => res["access_token"])
-    )
+    ).subscribe( token => {
+      this.token.update( value => token);
+      console.log('token desde el servicio' + this.token())
+  })
   }
 
 
