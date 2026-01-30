@@ -19,7 +19,7 @@ export class AlumnadoService {
 
   public obtenerToken(apiKey: string): Observable<any> {
 
-    const url: string = 'https://wwwpre.educacion.org/educacion/bussed/apieduca/v1/seguridad/autenticacion-por-aplicacion';
+    const url: string = 'SERVIDOR' + '/seguridad/autenticacion-por-aplicacion';
 
     const body: IBodySolicitudToken = {
       apiKey: apiKey
