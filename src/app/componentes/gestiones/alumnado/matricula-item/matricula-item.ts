@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Button } from 'primeng/button'
+import { AplicacionStore } from '../../../../estados/aplicacionState';
 
 @Component({
   selector: 'app-matricula-item',
-  imports: [],
+  imports: [Button],
   templateUrl: './matricula-item.html',
   styleUrl: './matricula-item.css',
 })
 export class MatriculaItem {
+
+  storeAplicacion = inject(AplicacionStore)
 
 }

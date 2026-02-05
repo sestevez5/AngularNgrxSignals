@@ -1,9 +1,9 @@
 import { EnumSexo } from "./EnumSexo";
 
 export interface IPersona {
-    primerApellid: string;
+    primerApellido: string;
     segundoApellido: string;
     nombre: string;
-    nifnie: string;
+    nifNie: string;
     sexo: EnumSexo;
 }
